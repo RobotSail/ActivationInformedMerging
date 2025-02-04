@@ -64,11 +64,12 @@ python performAIM.py --merged_model ./DARE_TIES_InstructMathCode --pretrained_mo
 
 # Summary of Findings
 We find that in basically all merging methods we tested applying AIM improves performance and pushed the pareto front of the resulting model population and achieves the highest scrores in benchmarks. The figure below shows how with decreasing $\omega$ (more AIM relaxation) leads to further improvements in some models (HV gain is the hypervolume gained by adding the model to the population models used for merging (more is better)):
-![alt text](image.png)
+
+<img width="600px" alt="Screenshot 2025-02-04 at 10 15 38 AM" src="https://github.com/user-attachments/assets/5cd5119e-a292-45d4-972f-b2dd6febf6f8" />
 
 We can observe this better by visualizing some of the pareto fronts for different model populations:
 
-![alt text](image-1.png)
+<img width="100%" alt="Screenshot 2025-02-04 at 10 22 25 AM" src="https://github.com/user-attachments/assets/5d88a71e-16ca-4f71-84f7-6e8de96ea69a" />
 
 Overall the results of our experiments are as follows for the different tests:
 
