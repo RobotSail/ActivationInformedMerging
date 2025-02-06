@@ -4,8 +4,10 @@
 Model merging, a method that combines the parameters and embeddings of multiple fine-tuned large language models (LLMs), offers a promising approach to enhance model performance across various tasks while maintaining computational efficiency. 
 This paper introduces Activation-Informed Merging (AIM), a technique that integrates the information from the activation space of LLMs into the merging process to improve performance and robustness. 
 AIM is designed as a flexible, complementary solution that is applicable to any existing merging method.
-It aims to preserve critical weights from the base model, drawing on principles from continual learning~(CL) and model compression.
-Utilizing a task-agnostic calibration set, AIM selectively prioritizes essential weights during merging. We empirically demonstrate that AIM significantly enhances the performance of merged models across multiple benchmarks. Our findings suggest that considering the activation-space information can provide substantial advancements in the model merging strategies for LLMs with up to 40\% increase in benchmark performance.
+It aims to preserve critical weights from the base model, drawing on principles from continual learning(CL) and model compression.
+Utilizing a task-agnostic calibration set, AIM selectively prioritizes essential weights during merging. We empirically demonstrate that AIM significantly enhances the performance of merged models across multiple benchmarks. Our findings suggest that considering the activation-space information can provide substantial advancements in the model merging strategies for LLMs with up to 40% increase in benchmark performance.
+
+[📝 Full Paper](https://arxiv.org/abs/2502.02421) | [🤗AIM Checkpoints](https://huggingface.co/collections/ahn1376/aim-merged-checkpoints-with-aim-67a226c77c915124f4bab456) | [🤗Baseline Checkpoints](https://huggingface.co/collections/ahn1376/aim-merged-checkpoints-baseline-w-o-aim-67a15f05fa1066b3f642f2c6)
 
 # Checkpoints Used In Experiments
 All checkpoints (merged with and without AIM) that were used for experiments in the paper are provided on huggingface. Below are the links to the aforementioned models:
