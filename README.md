@@ -149,3 +149,15 @@ Overall the results of our experiments are as follows for the different tests:
 | Code + Instruction Tuned + Math | No | 25.00 | 33.20 | 54.58 | 13.50 | 64.20 | 31.44 | 0.29 |
 | | Yes | 26.83 (+7.32%) | 32.80 (-1.20%) | **54.98** (+0.73%) | 14.40 (+6.67%) | 64.00 (-0.31%) | 32.82 (+4.39%) | 0.30 (+4.70%) |
 
+# Citation
+```bib
+@misc{nobari2025activationinformedmerginglargelanguage,
+      title={Activation-Informed Merging of Large Language Models}, 
+      author={Amin Heyrani Nobari and Kaveh Alimohammadi and Ali ArjomandBigdeli and Akash Srivastava and Faez Ahmed and Navid Azizan},
+      year={2025},
+      eprint={2502.02421},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2502.02421}, 
+}
+```
