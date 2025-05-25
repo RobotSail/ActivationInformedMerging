@@ -7,7 +7,7 @@ from .ActivationMerging import activation_merge
 
 
 class Merger:
-    def __init__(self, merge_method:str , base_model: str, models_to_merge: str, save_path: str, weights: Optional[List[float]] = None, dtype: str = "bfloat16", **merger_kwargs):
+    def __init__(self, merge_method:str , base_model: str, models_to_merge: list[str], save_path: str, weights: Optional[List[float]] = None, dtype: str = "bfloat16", **merger_kwargs):
         self.base_model = base_model
         self.models_to_merge = models_to_merge
         self.save_path = save_path
@@ -16,15 +16,15 @@ class Merger:
         self.merger_kwargs = merger_kwargs
         
         if weights is None:
-            self.weights = [1.0 for _ in range(len(models_to_merge))]
+            self.weights = [1.0 for _ in models_to_merge]
         else:
             self.weights = weights
         
         self.models = []
         
-        for i in range(len(models_to_merge)):
+        for i, model in enumerate(models_to_merge):
             self.models.append({
-                'model': models_to_merge[i],
+                'model': model,
                 'parameters': {'weight': self.weights[i]}
             })
         
@@ -73,7 +73,9 @@ class Merger:
             
             return None
             
-        options = MergeOptions()
+        options = MergeOptions(
+            trust_remote_code=True
+        )
         if gpu:
             options.cuda = True
         else:
